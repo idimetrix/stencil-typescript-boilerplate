@@ -1,0 +1,57 @@
+{
+  "version": 1.2,
+  "tags": [
+    {
+      "name": "my-component",
+      "path": "./src/components/my-component/my-component.tsx",
+      "description": "",
+      "attributes": [
+        {
+          "name": "first",
+          "type": "string",
+          "description": "The first name",
+          "required": false
+        },
+        {
+          "name": "last",
+          "type": "string",
+          "description": "The last name",
+          "required": false
+        },
+        {
+          "name": "middle",
+          "type": "string",
+          "description": "The middle name",
+          "required": false
+        }
+      ],
+      "events": [],
+      "methods": [],
+      "slots": [],
+      "cssProperties": [],
+      "cssParts": []
+    },
+    {
+      "name": "my-test",
+      "path": "./src/components/my-test/my-test.tsx",
+      "description": "",
+      "attributes": [],
+      "events": [],
+      "methods": [],
+      "slots": [],
+      "cssProperties": [],
+      "cssParts": []
+    },
+    {
+      "name": "my-test2",
+      "path": "./src/components/my-test2/my-test2.tsx",
+      "description": "",
+      "attributes": [],
+      "events": [],
+      "methods": [],
+      "slots": [],
+      "cssProperties": [],
+      "cssParts": []
+    }
+  ]
+}
