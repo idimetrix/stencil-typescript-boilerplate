@@ -1,4 +1,8 @@
 :host {
   background: #f00;
   display: block;
+
+  > span {
+    background: #0f0;
+  }
 }

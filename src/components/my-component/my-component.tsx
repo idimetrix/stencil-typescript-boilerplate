@@ -1,4 +1,16 @@
-import { Component, Prop, h, ComponentInterface, State } from '@stencil/core';
+import {
+  Component,
+  Host,
+  Prop,
+  h,
+  ComponentInterface,
+  State,
+  Event,
+  Watch,
+  Element,
+  Listen,
+  EventEmitter,
+} from '@stencil/core';
 import log from '../../log';
 
 @Component({
@@ -7,34 +19,60 @@ import log from '../../log';
   shadow: true,
 })
 export class MyComponent implements ComponentInterface {
+  @Element() el: HTMLMyComponentElement;
+
   // --- props
-  /**
-   * The first name
-   */
-  @Prop() first: string;
 
   /**
-   * The middle name
+   * Prop 1
    */
-  @Prop() middle: string;
+  @Prop() prop1: string;
 
   /**
-   * The last name
+   * Prop2
    */
-  @Prop() last: string;
+  @Prop() prop2: string;
 
   /**
-   * The test
+   * Prop  3
    */
-  @Prop() test: string;
+  @Prop() prop3: string;
 
   // --- states
 
   @State() name: string;
 
+  // ---
+
+  @Watch('name')
+  nameChanged(newName: boolean, oldName: boolean) {
+    log.log('MyComponent(nameChanged)', { newName, oldName });
+  }
+
+  // --- events
+
+  @Event() testEvent: EventEmitter<any>;
+
+  // --- listeners
+
+  @Listen('click', {
+    passive: true,
+  })
+  onClick() {
+    log.log('MyComponent(onClick)');
+  }
+
   // --- methods
 
   // --- hooks
+
+  connectedCallback() {
+    log.log('MyComponent(connectedCallback)');
+  }
+
+  disconnectedCallback() {
+    log.log('MyComponent(disconnectedCallback)');
+  }
 
   componentWillLoad(): Promise<void> | void {
     log.log('MyComponent(componentWillLoad)');
@@ -50,12 +88,12 @@ export class MyComponent implements ComponentInterface {
     log.log('MyComponent(componentDidLoad)');
   }
 
-  componentWillUpdate(): Promise<void> | void {
-    log.log('MyComponent(componentWillUpdate)');
-  }
-
-  componentDidUpdate() {
-    log.log('MyComponent(componentDidUpdate)');
+  componentShouldUpdate(
+    newVal: any,
+    oldVal: any,
+    propName: string
+  ): boolean | void {
+    log.log('MyComponent(componentShouldUpdate)', { newVal, oldVal, propName });
   }
 
   componentWillRender(): Promise<void> | void {
@@ -66,17 +104,21 @@ export class MyComponent implements ComponentInterface {
     log.log('MyComponent(componentDidRender)');
   }
 
-  componentShouldUpdate(
-    newVal: any,
-    oldVal: any,
-    propName: string
-  ): boolean | void {
-    log.log('MyComponent(componentShouldUpdate)', { newVal, oldVal, propName });
+  componentWillUpdate(): Promise<void> | void {
+    log.log('MyComponent(componentWillUpdate)');
+  }
+
+  componentDidUpdate() {
+    log.log('MyComponent(componentDidUpdate)');
   }
 
   render() {
     log.log('MyComponent(render)');
 
-    return <div>Hello, World! I'm {this.name}</div>;
+    return (
+      <Host>
+        Hello, World! I'm <span>{this.name}</span>
+      </Host>
+    );
   }
 }

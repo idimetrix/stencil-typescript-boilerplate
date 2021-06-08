@@ -49,6 +49,7 @@
     "@stencil/core": "^2.6.0",
     "@stencil/eslint-plugin": "^0.3.1",
     "@stencil/sass": "^1.4.1",
+    "@stencil/store": "^1.4.1",
     "@storybook/addon-a11y": "^6.3.0-beta.16",
     "@storybook/addon-actions": "^6.3.0-beta.16",
     "@storybook/addon-backgrounds": "^6.3.0-beta.16",

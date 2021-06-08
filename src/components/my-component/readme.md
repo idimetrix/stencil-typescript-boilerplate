@@ -7,12 +7,18 @@
 
 ## Properties
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
-| `test`   | `test`    | The last name   | `string` | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `prop1`  | `prop-1`  | Prop 1      | `string` | `undefined` |
+| `prop2`  | `prop-2`  | Prop2       | `string` | `undefined` |
+| `prop3`  | `prop-3`  | Prop  3     | `string` | `undefined` |
+
+
+## Events
+
+| Event       | Description | Type               |
+| ----------- | ----------- | ------------------ |
+| `testEvent` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

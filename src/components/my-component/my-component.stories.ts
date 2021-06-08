@@ -4,22 +4,22 @@ export default {
   title: 'Components/My component',
   component: 'my-component', // which is also found in the `custom-elements.json`
   argTypes: {
-    first: { control: { type: 'text' } },
-    middle: { control: { type: 'text' } },
-    last: { control: { type: 'text' } },
+    prop1: { control: { type: 'text' } },
+    prop2: { control: { type: 'text' } },
+    prop3: { control: { type: 'text' } },
   },
 };
 
-export const basic = ({ first, middle, last }) => html`
+export const basic = ({ prop1, prop2, prop3 }) => html`
   <my-component
-    first="${first}"
-    middle="${middle}"
-    last="${last}"
+    prop1="${prop1}"
+    prop2="${prop2}"
+    prop3="${prop3}"
   ></my-component>
 `;
 
 basic.args = {
-  first: '',
-  middle: '',
-  last: '',
+  prop1: '',
+  prop2: '',
+  prop3: '',
 };

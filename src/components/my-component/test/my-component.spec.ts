@@ -1,4 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
+
 import { MyComponent } from '../my-component';
 
 describe('my-component', () => {
@@ -10,9 +11,7 @@ describe('my-component', () => {
     expect(root).toEqualHtml(`
       <my-component>
         <mock:shadow-root>
-          <div>
-            Hello, World! I'm
-          </div>
+          Hello, World! I'm <span></span>
         </mock:shadow-root>
       </my-component>
     `);
@@ -21,14 +20,12 @@ describe('my-component', () => {
   it('renders with values', async () => {
     const { root } = await newSpecPage({
       components: [MyComponent],
-      html: `<my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>`,
+      html: `<my-component prop1="" prop2="" prop3=""></my-component>`,
     });
     expect(root).toEqualHtml(`
-      <my-component first="Stencil" last="'Don't call me a framework' JS">
+      <my-component prop1="" prop2="" prop3="">
         <mock:shadow-root>
-          <div>
-            Hello, World! I'm Stencil 'Don't call me a framework' JS
-          </div>
+          Hello, World! I'm <span></span>
         </mock:shadow-root>
       </my-component>
     `);

@@ -7,31 +7,30 @@
       "description": "",
       "attributes": [
         {
-          "name": "first",
+          "name": "prop-1",
           "type": "string",
-          "description": "The first name",
+          "description": "Prop 1",
           "required": false
         },
         {
-          "name": "last",
+          "name": "prop-2",
           "type": "string",
-          "description": "The last name",
+          "description": "Prop2",
           "required": false
         },
         {
-          "name": "middle",
+          "name": "prop-3",
           "type": "string",
-          "description": "The middle name",
-          "required": false
-        },
-        {
-          "name": "test",
-          "type": "string",
-          "description": "The last name",
+          "description": "Prop  3",
           "required": false
         }
       ],
-      "events": [],
+      "events": [
+        {
+          "name": "testEvent",
+          "description": ""
+        }
+      ],
       "methods": [],
       "slots": [],
       "cssProperties": [],
