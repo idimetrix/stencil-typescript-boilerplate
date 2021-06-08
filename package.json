@@ -15,7 +15,8 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "clean": "rm -rf dist/",
+    "build": "npm run clean && stencil build --docs",
     "dev": "stencil build --watch --serve",
     "generate": "stencil generate",
     "serve": "serve www -p 5000",
@@ -37,7 +38,7 @@
     "version": "standard-version",
     "storybook": "start-storybook -p 6006 -s dist/",
     "storybook:update": "npx sb@next upgrade --prerelease",
-    "storybook:build": "build-storybook -s dist/",
+    "storybook:build": "npm run build && build-storybook -s dist/",
     "storybook:build:serve": "cd storybook-static && ws --spa index.html",
     "check:packages": "npm-check --skip-unused || true",
     "check:type": "tsc --noEmit",
