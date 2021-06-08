@@ -23,30 +23,14 @@
           "type": "string",
           "description": "The middle name",
           "required": false
+        },
+        {
+          "name": "test",
+          "type": "string",
+          "description": "The last name",
+          "required": false
         }
       ],
-      "events": [],
-      "methods": [],
-      "slots": [],
-      "cssProperties": [],
-      "cssParts": []
-    },
-    {
-      "name": "my-test",
-      "path": "./src/components/my-test/my-test.tsx",
-      "description": "",
-      "attributes": [],
-      "events": [],
-      "methods": [],
-      "slots": [],
-      "cssProperties": [],
-      "cssParts": []
-    },
-    {
-      "name": "my-test2",
-      "path": "./src/components/my-test2/my-test2.tsx",
-      "description": "",
-      "attributes": [],
       "events": [],
       "methods": [],
       "slots": [],

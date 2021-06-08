@@ -59,7 +59,7 @@ async function generateCustomElementsJson(docsData: JsonDocs) {
 
 export const config: Config = {
   plugins: [sass()],
-  namespace: 'stencil-boilerplate',
+  namespace: 'stencil',
   taskQueue: 'async',
   outputTargets: [
     {

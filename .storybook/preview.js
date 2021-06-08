@@ -1,10 +1,17 @@
-/* global window */
-
 import {
   configure,
   addParameters,
   setCustomElements,
 } from '@storybook/web-components';
+import { create } from '@storybook/theming';
+import { addons } from '@storybook/addons';
+
+addons.setConfig({
+  theme: create({
+    base: 'light',
+    brandTitle: 'Stencil',
+  }),
+});
 
 import customElements from '../custom-elements.json';
 
@@ -17,9 +24,7 @@ addParameters({
   },
 });
 
-// configure(require.context('../stories', true, /\.stories\.(js|jsx|ts|tsx|mdx)$/), module);
-
-const req = require.context('../src', true, /\.src\.(js|jsx|ts|tsx|mdx)$/);
+const req = require.context('../src', true, /\.stories\.(js|jsx|ts|tsx|mdx)$/);
 
 configure(req, module);
 

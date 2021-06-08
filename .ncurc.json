@@ -1,0 +1,3 @@
+{
+  "reject": ["jest", "jest-cli"]
+}

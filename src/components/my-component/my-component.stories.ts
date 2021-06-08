@@ -17,8 +17,9 @@ export const basic = ({ first, middle, last }) => html`
     last="${last}"
   ></my-component>
 `;
+
 basic.args = {
-  first: 'Stencil',
-  middle: '😎',
-  last: "'Don't call me a framework' JS",
+  first: '',
+  middle: '',
+  last: '',
 };
